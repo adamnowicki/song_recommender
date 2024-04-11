@@ -4,7 +4,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pickle
 import times
-import sklearn
 import time
 
 import os
