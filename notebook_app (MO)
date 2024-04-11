@@ -1,0 +1,49 @@
+def search_track_ids(artist_name=None, song_name=None, num_results=3):
+    if artist_name and song_name:
+        query = f'artist:{artist_name} track:{song_name}'
+    elif song_name:
+        query = song_name
+    else:
+        print("Error: Please provide at least a song name.")
+        return []
+
+    # Perform the search
+    results = sp.search(q=query, limit=num_results, type='track')
+
+    # Extract track IDs from the search results
+    track_ids = []
+    for item in results['tracks']['items']:
+        track_id = item['id']
+        track_ids.append(track_id)
+    return track_ids
+
+# Example usage
+artist_name = input("Enter the name of the artist / band (optional): ")
+song_name = input("Enter the name of the song (mandatory): ")
+
+# Search for track IDs
+track_ids = search_track_ids(artist_name, song_name)
+
+# Create iframes for each track
+iframes = []
+for track_id in track_ids:
+    iframe = f'<iframe src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="320" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+    iframes.append(iframe)
+
+# Combine iframes into a single HTML string
+html_code = '<br>'.join(iframes)
+
+# Display the HTML code
+display(HTML(html_code))
+
+# Prompt user for input
+selection = input("Enter your choice (1, 2, or 3): ")
+
+# Check if the input is valid
+if selection in ['1', '2', '3']:
+    # Get the track ID corresponding to the user's choice
+    selected_track_id = track_ids[int(selection) - 1]
+    print("You selected Track", selection)
+    print("Track ID:", selected_track_id)
+else:
+    print("Invalid input. Please enter 1, 2, or 3.")
