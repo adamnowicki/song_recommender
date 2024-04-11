@@ -7,11 +7,15 @@ import times
 import sklearn
 import time
 
+import os
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+
 
 def main():
     st.title(':dog2: Parkies Recommendations :dog2:')
     st.sidebar.image('images/parkie.png', use_column_width="always")
-    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials())
+    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(CLIENT_ID, CLIENT_SECRET))
     st.sidebar.header("Search for your favorite song")
     
     track_search = st.sidebar.text_input("Enter the title of your song", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
