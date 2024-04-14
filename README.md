@@ -4,6 +4,8 @@ Welcome to Parkie's Recommendations, a personalized music recommendation app pow
 
 ## Instructions
 
+Open our app: https://songrecommender-bgj9w3rcghsrwe3rtqfkww.streamlit.app
+
 ### Search for Your Favorite Song:
 Enter the title of your favorite song in the designated text box.
 Optionally, you can also enter the name of the artist.
