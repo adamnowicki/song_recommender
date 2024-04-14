@@ -28,4 +28,6 @@ It then recommends two tracks from the cluster that closely match your selected 
 Parkies Recommendations is powered by Spotify's API and utilizes machine learning models to provide personalized suggestions.
 For the best experience, ensure you have an active internet connection.
 Sit back, relax, and let Parkies guide you through a world of music tailored just for you!
-Thank you for using Parkies Recommendations. Enjoy discovering new music! 🎶
+
+# Thank you for using Parkies Recommendations. 
+# Enjoy discovering new music! 🎶
