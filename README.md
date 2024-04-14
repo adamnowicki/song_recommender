@@ -29,5 +29,5 @@ Parkies Recommendations is powered by Spotify's API and utilizes machine learnin
 For the best experience, ensure you have an active internet connection.
 Sit back, relax, and let Parkies guide you through a world of music tailored just for you!
 
-# Thank you for using Parkies Recommendations. 
-# Enjoy discovering new music! 🎶
+### Thank you for using Parkies Recommendations. 
+### Enjoy discovering new music! 🎶
