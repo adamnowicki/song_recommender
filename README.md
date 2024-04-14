@@ -1,6 +1,6 @@
-# Parkies Recommendations App 🐶
+# Parkie's Recommendations App 🐶
 
-Welcome to Parkies Recommendations, a personalized music recommendation app powered by Spotify!
+Welcome to Parkie's Recommendations, a personalized music recommendation app powered by Spotify!
 
 ## Instructions
 
