@@ -2,6 +2,12 @@
 
 Welcome to Parkie's Recommendations, a personalized music recommendation app powered by Spotify!
 
+Authors:
+@Adam Nowicki
+@Javier Peyrere
+@Martin Ossandon Busch
+@Smita Prakas
+
 ## Instructions
 
 Open our app: https://songrecommender-bgj9w3rcghsrwe3rtqfkww.streamlit.app
