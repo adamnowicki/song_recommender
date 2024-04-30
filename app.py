@@ -3,6 +3,8 @@ import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pickle
+import times
+import sklearn
 import time
 
 import os
@@ -18,7 +20,8 @@ def main():
     
     track_search = st.sidebar.text_input("Enter the title of your song", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
     artist_search = st.sidebar.text_input("Enter the name of the artist (optional)", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
-
+    st.sidebar.write("The project was created during Ironhack Data Analytics Bootcamp Paris (2024) by: Adam Nowicki, Javier Peyriere, Martino Ossandon Busch and Smita Prakas")
+    
     if artist_search and track_search:
         query = f'artist:{artist_search} track:{track_search}'
     elif track_search:
@@ -36,7 +39,7 @@ def main():
             track_id = track['id']
             chosen_track_id=""
             # st.write(f"{artists} - {song_name}")
-            st.write(f'<iframe src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="700" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>', unsafe_allow_html=True)
+            st.write(f'<iframe src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="100" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>', unsafe_allow_html=True)
 
             if st.button(f'Select this song', key=f'select_button_{i+1}'):
                 chosen_track_id = track_id
