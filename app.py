@@ -3,7 +3,6 @@ import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pickle
-import times
 import sklearn
 import time
 
@@ -20,7 +19,8 @@ def main():
     
     track_search = st.sidebar.text_input("Enter the title of your song", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
     artist_search = st.sidebar.text_input("Enter the name of the artist (optional)", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
-    st.sidebar.write("The project was created during Ironhack Data Analytics Bootcamp Paris (2024) by: Adam Nowicki, Javier Peyriere, Martino Ossandon Busch and Smita Prakas")
+    st.sidebar.caption("The project was created during Ironhack Data Analytics Bootcamp Paris (2024) by:  \n Adam Nowicki  \n Javier Peyriere  \n Martino Ossandon Busch  \n Smita Prakas")
+
     
     if artist_search and track_search:
         query = f'artist:{artist_search} track:{track_search}'
