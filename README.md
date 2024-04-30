@@ -4,7 +4,7 @@ Welcome to Parkie's Recommendations, a personalized music recommendation app pow
 
 Authors:
 @Adam Nowicki
-@Javier Peyrere
+@Javier Peyriere
 @Martin Ossandon Busch
 @Smita Prakas
 
